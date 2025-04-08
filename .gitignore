@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor/IDE files
+.qodo
+.vscode/
+.idea/
+
+# Environment
+.env
+*.env
+
+# Data files & outputs
+*.db
+*.sqlite
+*.log
+*.csv
+*.tsv
+*.xlsx
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Images or plots
+*.png
+*.jpg
+*.jpeg
+
+# Docker
+*.pid
