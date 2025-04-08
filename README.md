@@ -1,5 +1,5 @@
 # Sales Data ETL Pipeline
-Pipeline Data Engineering phân tích dữ liệu bán hàng từ CSV và API tỷ giá.
+Pipeline Data Engineering phân tích dữ liệu bán hàng từ CSV và API tỷ giá,sau đó lưu trữ và trực quan hóa dữ liệu.
 
 ## Mục tiêu
 - Thu thập dữ liệu bán hàng từ CSV và tỷ giá từ ExchangeRate-API.
@@ -7,15 +7,16 @@ Pipeline Data Engineering phân tích dữ liệu bán hàng từ CSV và API t�
 - Tạo báo cáo doanh thu (VND) và biểu đồ chuyên nghiệp.
 
 ## Công cụ
-- Python (Pandas, SQLAlchemy, Matplotlib, Seaborn).
-- PostgreSQL.
-- ExchangeRate-API (Key: 2de11a29b893a9c53ede5688).
+- **Python**: `pandas`, `requests`, `sqlalchemy`, `matplotlib`, `seaborn`
+- **PostgreSQL**: Lưu trữ dữ liệu
+- **Docker**: Đóng gói và triển khai
+- **ExchangeRate-API** (key mẫu: `2de11a29b893a9c53ede5688`)
 
 ## Pipeline
-1. **Extract**: Đọc CSV và gọi API tỷ giá USD -> VND.
-2. **Transform**: Làm sạch, tính doanh thu USD/VND.
-3. **Load**: Lưu vào PostgreSQL.
-4. **Analyze**: Báo cáo và trực quan hóa.
+1. **Extract**: Đọc dữ liệu từ `sales_data.csv` và gọi API tỷ giá USD → VND.
+2. **Transform**: Làm sạch dữ liệu, tính toán `Total Sales` theo VND.
+3. **Load**: Lưu dữ liệu vào PostgreSQL (`sales_table`).
+4. **Analyze**: Tạo báo cáo, biểu đồ doanh thu theo sản phẩm, khu vực và thời gian.
 
 ## Hướng dẫn chạy
 1. Cài đặt: `pip install -r requirements.txt`.
@@ -26,3 +27,8 @@ Pipeline Data Engineering phân tích dữ liệu bán hàng từ CSV và API t�
 ## Kết quả
 - Bảng `sales_table` trong PostgreSQL.
 - Biểu đồ: `sales_by_product.png`, `sales_by_region.png`, `sales_by_date.png`.
+
+  👤 Thông tin tác giả
+👨‍💻 GitHub: @hoongcuong
+🌐 LinkedIn: https://www.linkedin.com/in/nghongcuong/
+📧 Email: hongcuong0626@gmail.com
